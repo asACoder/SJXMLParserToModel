@@ -21,6 +21,9 @@
 		D14FA98C19C80E480028C97E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D14FA96E19C80E480028C97E /* UIKit.framework */; };
 		D14FA99419C80E480028C97E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D14FA99219C80E480028C97E /* InfoPlist.strings */; };
 		D14FA99619C80E480028C97E /* SJXMLParserToModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D14FA99519C80E480028C97E /* SJXMLParserToModelTests.m */; };
+		D14FA9A419C80EE40028C97E /* SJXMLParserToModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D14FA9A319C80EE40028C97E /* SJXMLParserToModel.m */; };
+		D14FA9A619C80FCA0028C97E /* test.xml in Resources */ = {isa = PBXBuildFile; fileRef = D14FA9A519C80FCA0028C97E /* test.xml */; };
+		D14FA9A919C810330028C97E /* AddressesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D14FA9A819C810330028C97E /* AddressesModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,11 @@
 		D14FA99119C80E480028C97E /* SJXMLParserToModelTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SJXMLParserToModelTests-Info.plist"; sourceTree = "<group>"; };
 		D14FA99319C80E480028C97E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D14FA99519C80E480028C97E /* SJXMLParserToModelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJXMLParserToModelTests.m; sourceTree = "<group>"; };
+		D14FA9A219C80EE40028C97E /* SJXMLParserToModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJXMLParserToModel.h; sourceTree = "<group>"; };
+		D14FA9A319C80EE40028C97E /* SJXMLParserToModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJXMLParserToModel.m; sourceTree = "<group>"; };
+		D14FA9A519C80FCA0028C97E /* test.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test.xml; sourceTree = "<group>"; };
+		D14FA9A719C810330028C97E /* AddressesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressesModel.h; sourceTree = "<group>"; };
+		D14FA9A819C810330028C97E /* AddressesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressesModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +90,9 @@
 		D14FA95E19C80E480028C97E = {
 			isa = PBXGroup;
 			children = (
-				D14FA97019C80E480028C97E /* SJXMLParserToModel */,
+				D14FA99F19C80E860028C97E /* SJXMLParserToModel */,
+				D14FA9A119C80EB80028C97E /* Model */,
+				D14FA97019C80E480028C97E /* Controllers */,
 				D14FA98F19C80E480028C97E /* SJXMLParserToModelTests */,
 				D14FA96919C80E480028C97E /* Frameworks */,
 				D14FA96819C80E480028C97E /* Products */,
@@ -109,7 +119,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D14FA97019C80E480028C97E /* SJXMLParserToModel */ = {
+		D14FA97019C80E480028C97E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				D14FA97919C80E480028C97E /* AppDelegate.h */,
@@ -120,6 +130,7 @@
 				D14FA98219C80E480028C97E /* Images.xcassets */,
 				D14FA97119C80E480028C97E /* Supporting Files */,
 			);
+			name = Controllers;
 			path = SJXMLParserToModel;
 			sourceTree = "<group>";
 		};
@@ -150,6 +161,25 @@
 				D14FA99219C80E480028C97E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D14FA99F19C80E860028C97E /* SJXMLParserToModel */ = {
+			isa = PBXGroup;
+			children = (
+				D14FA9A219C80EE40028C97E /* SJXMLParserToModel.h */,
+				D14FA9A319C80EE40028C97E /* SJXMLParserToModel.m */,
+			);
+			name = SJXMLParserToModel;
+			sourceTree = "<group>";
+		};
+		D14FA9A119C80EB80028C97E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D14FA9A519C80FCA0028C97E /* test.xml */,
+				D14FA9A719C810330028C97E /* AddressesModel.h */,
+				D14FA9A819C810330028C97E /* AddressesModel.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +260,7 @@
 				D14FA98319C80E480028C97E /* Images.xcassets in Resources */,
 				D14FA97519C80E480028C97E /* InfoPlist.strings in Resources */,
 				D14FA97E19C80E480028C97E /* Main.storyboard in Resources */,
+				D14FA9A619C80FCA0028C97E /* test.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +280,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D14FA98119C80E480028C97E /* ViewController.m in Sources */,
+				D14FA9A919C810330028C97E /* AddressesModel.m in Sources */,
 				D14FA97B19C80E480028C97E /* AppDelegate.m in Sources */,
+				D14FA9A419C80EE40028C97E /* SJXMLParserToModel.m in Sources */,
 				D14FA97719C80E480028C97E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,7 +365,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -364,7 +397,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -378,7 +411,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SJXMLParserToModel/SJXMLParserToModel-Prefix.pch";
 				INFOPLIST_FILE = "SJXMLParserToModel/SJXMLParserToModel-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -391,7 +426,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SJXMLParserToModel/SJXMLParserToModel-Prefix.pch";
 				INFOPLIST_FILE = "SJXMLParserToModel/SJXMLParserToModel-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -455,6 +492,7 @@
 				D14FA99B19C80E480028C97E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D14FA99C19C80E480028C97E /* Build configuration list for PBXNativeTarget "SJXMLParserToModelTests" */ = {
 			isa = XCConfigurationList;
@@ -463,6 +501,7 @@
 				D14FA99E19C80E480028C97E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

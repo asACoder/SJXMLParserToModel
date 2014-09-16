@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE addresses SYSTEM "addresses.dtd">
+<addresses owner="swilson">
+    <person>
+        <lastName>Doe</lastName>
+        <firstName>John</firstName>
+        <phone location="mobile">(201) 345-6789</phone>
+        <email>jdoe@foo.com</email>
+        <address>
+            <street>100 Main Street</street>
+            <city>Somewhere</city>
+            <state>New Jersey</state>
+            <zip>07670</zip>
+        </address>
+    </person>
+</addresses>

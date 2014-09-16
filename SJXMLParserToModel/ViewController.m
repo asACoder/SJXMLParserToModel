@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#import "SJXMLParserToModel.h"
+
 @interface ViewController ()
 
 @end
@@ -17,7 +19,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    NSString* str =  [[NSBundle mainBundle] pathForResource:@"test" ofType:@"xml"];
+    NSData *data = [NSData dataWithContentsOfFile:str];
+    
+    SJXMLParserToModel *SJXMLParser = [[SJXMLParserToModel alloc] init];
+    
+    //断点打在此处，可以看到 已经成功解析
+    id obj =  [SJXMLParser SJXMLParserWithXMLData:data toCls:@"AddressesModel"];
 }
 
 - (void)didReceiveMemoryWarning
