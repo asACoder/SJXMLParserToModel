@@ -5,13 +5,13 @@ can parse xml to a custom class
 
 some classes can express a xml, for example
 
-<root><br>
-    <status>suc</status><br>
-    <person>
-        <name>abc</name>
-        <age>12</age>
-    </person>
-</root>
+    <root>
+        <status>suc</status>
+        <person>
+            <name>abc</name>
+            <age>12</age>
+        </person>
+    </root>
 
 we can use two class to express the xml 
 
