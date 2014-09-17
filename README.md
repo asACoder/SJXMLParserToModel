@@ -3,7 +3,7 @@ SJXMLParserToModel
 can parse xml to a custom class
 -----
 
-some classes can repress a xml, for example
+some classes can express a xml, for example
 
 <root>
     <status>suc</status>
@@ -13,7 +13,7 @@ some classes can repress a xml, for example
     </person>
 </root>
 
-we can use two class to repress the xml 
+we can use two class to express the xml 
 
 @interface Person
 @property(retain) NSString *name; // the name of property should be the same AS the name of the element in xml
@@ -28,7 +28,7 @@ we can use two class to repress the xml
 
 so we can parse the xml like this:
   
-//assume the data is a instance of NSData reperss the xml
+//assume the data is a instance of NSData express the xml
 
 SJXMLParserToModel *SJXMLParser = [[SJXMLParserToModel alloc] init];
 id obj =  [SJXMLParser SJXMLParserWithXML:data toCls:@"Example" infoDict:nil];
