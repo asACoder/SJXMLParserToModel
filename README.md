@@ -5,8 +5,8 @@ can parse xml to a custom class
 
 some classes can express a xml, for example
 
-<root>
-    <status>suc</status>
+<root>/<br>
+    <status>suc</status>/<br>
     <person>
         <name>abc</name>
         <age>12</age>
