@@ -9,6 +9,7 @@
 #import "SJXMLParserToModel.h"
 
 #import <objc/runtime.h>
+#import <objc/message.h>
 
 @interface SJXMLParserToModel() <NSXMLParserDelegate>
 {
@@ -36,8 +37,18 @@
 
 @implementation SJXMLParserToModel
 
-
--(id) SJXMLParserWithXMLData:(NSData*)xml toCls:(NSString*)cls
+/*
+ * parser XML to custom class
+ *
+ *  @para:cls
+ *        the name of custom class
+ *
+ *  @para:infoDict
+ *          key:elementname in xml or property in custom class
+ *          value: custom class name
+ *
+ */
+-(id) SJXMLParserWithXMLData:(NSData*)xml toCls:(NSString*)cls infoDict:(NSDictionary *)infoDict
 {
     
     if (!self.parser) {
@@ -46,10 +57,9 @@
     id suc = [self.parser initWithData:xml];
     if (suc == nil) return nil;
     self.toCls = cls;
-    
+    self.infoDict = infoDict;
     
     [self.parser setDelegate:self];
-    
     [self.parser parse];
     
     return _isSuccess ? _objc : nil;
@@ -112,6 +122,24 @@
 
         }else if([type isEqualToString:@"NSMutableArray"]){
             
+            NSMutableArray *objArr =(NSMutableArray*) objc_msgSend(_parseringObjc,NSSelectorFromString(elementName));
+            
+            if (objArr == nil) {
+                
+                objArr = [[NSMutableArray alloc] initWithCapacity:10];
+                [_parseringObjc setValue:objArr forKeyPath:elementName];
+            }
+            
+            NSString *objType = self.infoDict[elementName];
+            id obj = [[NSClassFromString(objType) alloc] init];
+            
+            _parseringObjc = obj;
+            [self parserAttributeDict:attributeDict forObj:_parseringObjc];
+            [_parserObjcsArr addObject:_parseringObjc];
+            [_typesArr addObject:@"NSMutableArray"];
+            
+            [objArr addObject:_parseringObjc];
+            
         }else{ // custom class
             
             id obj = [[NSClassFromString(type) alloc] init];
@@ -154,6 +182,9 @@
         [_elementValue deleteCharactersInRange:NSMakeRange(0, _elementValue.length)];
         
     }else if ([type isEqualToString:@"NSMutalbeArray"]) {
+        
+        [_parserObjcsArr removeLastObject];
+        _parseringObjc = [_parserObjcsArr lastObject];
         
     }else if(![type isEqualToString:@""]){ // custom class
         

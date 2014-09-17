@@ -26,7 +26,7 @@
     SJXMLParserToModel *SJXMLParser = [[SJXMLParserToModel alloc] init];
     
     //断点打在此处，可以看到 已经成功解析
-    id obj =  [SJXMLParser SJXMLParserWithXMLData:data toCls:@"AddressesModel"];
+    id obj =  [SJXMLParser SJXMLParserWithXMLData:data toCls:@"AddressesModel" infoDict:@{@"person": @"Person",@"address":@"Address"}];
 }
 
 - (void)didReceiveMemoryWarning

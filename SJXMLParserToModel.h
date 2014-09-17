@@ -10,6 +10,6 @@
 
 @interface SJXMLParserToModel : NSObject
 
--(id) SJXMLParserWithXMLData:(NSData*)xml toCls:(NSString*)cls;
+-(id) SJXMLParserWithXMLData:(NSData*)xml toCls:(NSString*)cls infoDict:(NSDictionary*)infoDict;
 
 @end

@@ -34,7 +34,9 @@
 
 @property(nonatomic,retain) NSString *owner;
 
-@property(nonatomic,retain) Person *person;
+//@property(nonatomic,retain) Person *person;
+
+@property(nonatomic,retain) NSMutableArray *person;
 @end
 
 @interface Person : NSObject
@@ -44,7 +46,8 @@
 @property(nonatomic,retain) NSString *phone;
 @property(nonatomic,retain) NSString *location;
 @property(nonatomic,retain) NSString *email;
-@property(nonatomic,retain) Address *address;
+//@property(nonatomic,retain) Address *address;
+@property(nonatomic,retain) NSMutableArray *address;
 
 
 @end

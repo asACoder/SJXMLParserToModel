@@ -12,5 +12,29 @@
             <state>New Jersey</state>
             <zip>07670</zip>
         </address>
+        <address>
+            <street>101 Main Street</street>
+            <city>Somewhere</city>
+            <state>New Jersey</state>
+            <zip>07670</zip>
+        </address>
+    </person>
+    <person>
+        <lastName>fsj</lastName>
+        <firstName>handsome</firstName>
+        <phone location="mobile">123456</phone>
+        <email>fsjzzu@126.com</email>
+        <address>
+            <street>102 Main Street</street>
+            <city>beijing</city>
+            <state>New Jersey</state>
+            <zip>07670</zip>
+        </address>
+        <address>
+            <street>103 Main Street</street>
+            <city>Somewhere</city>
+            <state>New Jersey</state>
+            <zip>07670</zip>
+        </address>
     </person>
 </addresses>
