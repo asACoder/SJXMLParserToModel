@@ -1,6 +1,6 @@
 SJXMLParserToModel
 ====
-can parse xml to a custom class
+parse xml to a custom class
 -----
 
 some classes can express a xml, for example
