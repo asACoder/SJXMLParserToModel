@@ -66,4 +66,4 @@ so we can parse the xml like this:
 
     SJXMLParserToModel *SJXMLParser = [[SJXMLParserToModel alloc] init];
     id obj =  [SJXMLParser SJXMLParserWithXML:data toCls:@"Example" infoDict:@{@"person":@"Person"}];
-// infoDict key is the name of element ,and value is the class which we use to express the element;
+//in the parameter infoDict, key is the name of element ,and value is the class which we use to express the element;
